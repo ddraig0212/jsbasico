@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exercicio2</title>
+	<script>
+		function trocaLetra(caracter){
+			switch(caracter){
+				case"A": return "Q";
+				case"B": return "W";
+				case"C": return "E";
+				case"D": return "R";
+				case"E": return "T";
+				case"F": return "Y";
+				case"G": return "U";
+				case"H": return "I";
+				case"I": return "O";
+				case"J": return "P";
+				case"K": return "A";
+				case"L": return "S";
+				case"M": return "D";
+				case"N": return "F";
+					default: return caracter;
+			}
+		}
+		function cript(){
+			var frase= document.getElementById("frase").value;
+			frase= frase.toUpperCase();
+			var fraseCript ="";
+			for (var i=0; i<frase.length; i++) {
+				var letra = frase.charAt(i);
+				var letracript= trocaLetra(letra);
+				fraseCript += letracript;
+			}
+			document.write(fraseCript);
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="frase"/>
+		<input type="button" onclick="cript()" value="Criptografar" />
+	</form>
+</body>
+</html>
